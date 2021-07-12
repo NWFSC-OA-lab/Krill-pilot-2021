@@ -1,0 +1,45 @@
+---
+title: "krill 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r load libraries and data}
+library(here)
+library(metacsv)
+library(ggplot2)
+
+#Read in raw data file to create a metadata template
+krill_data <- read.csv(here("data", "raw_data_by_jar.csv" ))
+#Write out blank meta data template
+write_meta_template(krill_data, here("output","Krill-pilot-2021"))
+```
+
+```{r clean up some stuff and plot and make some simple plots}
+#Remove notes columns
+krill_data <- krill_data[,-c(11,12)]
+
+# #Change date format, though may not be necessary sine the time frame is so short
+# str(krill_data)
+# krill_data$NewDate <- as.POSIXct(strptime(krill_data$Date_died, "%m/%e/%Y"))
+
+#Scatter plot of death dates
+p <- ggplot(krill_data, aes(Date_died, Temp))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p + ggtitle("Krill survival by jar type and temperature") + xlab("Date Died") + ylab("Temp")
+
+p <- ggplot(krill_data, aes(Date_died, Water_type))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p + ggtitle("Krill survival by jar type and water type") + xlab("Date Died") + ylab("Water type") 
+
+#Scatter plot of hatch rates
+p <- ggplot(krill_data, aes(Hatch_rate, Temp))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p + ggtitle("Hatching success by jar type and temperature") + xlab("Date Died") + ylab("Temp")
+
+p <- ggplot(krill_data, aes(Hatch_rate, Water_type))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p + ggtitle("Hatching success by jar type and water type") + xlab("Date Died") + ylab("Water type") 
+
+```
+

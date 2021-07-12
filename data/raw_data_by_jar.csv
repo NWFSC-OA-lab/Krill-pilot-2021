@@ -1,0 +1,33 @@
+Jar_ID,Water_type,Jar_type,Temp,Date_eggs_laid ,Initial_egg_count,Date_hatched,Final_egg_count,Hatch_rate,Date_died,Preservation,Notes
+CH06_01_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH06_02_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,N/A,6/24/2021,N/A,Died still purple
+CH06_03_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH06_04_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH06_05_L_nat,natural,large,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH06_06_L_nat,natural,large,10 C,06/23/2021,107,6/25/2021,5,102,N/A,1+ Calytopis observed,Removed after eggs laid
+CH06_07_L_art,artificial,large,10 C,N/A,N/A,N/A,N/A,N/A,6/30/2021,N/A,"Held out for awhile, eventually died clear. "
+CH06_08_L_art,artificial,large,10 C,06/23/2021,22,6/28/2021,16,6,N/A,Saw dead & live larvae,Removed after eggs laid
+CH07_09_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,N/A,6/24/2021,N/A,Died clear
+CH07_10_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH07_11_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH07_12_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,N/A,6/24/2021,N/A,Died still purple
+CH07_13_L_nat,natural,large,10 C,6/23/2021,54,6/25/2021,33,21,N/A,At least 2+ Calytopis observed,Removed after eggs laid
+CH07_14_L_nat,natural,large,10 C,6/23/2021,79,6/25/2021,4,75,N/A,4+ Calytopis observed,Removed after eggs laid
+CH07_15_L_art,artificial,large,10 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH07_16_L_art,artificial,large,10 C,N/A,N/A,N/A,N/A,N/A,6/25/2021,N/A,Died clear
+CH08_17_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH08_18_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,N/A,6/24/2021,N/A,Died clear
+CH08_19_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH08_20_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH08_21_L_nat,natural,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH08_22_L_nat,natural,large,15 C,6/23/2021,19,6/25/2021,5,14,N/A, No live larvea found at jar bottom ,Removed after eggs laid
+CH08_23_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH08_24_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH09_25_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,N/A,6/24/2021,N/A,Died clear
+CH09_26_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH09_27_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH09_28_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH09_29_L_nat,natural,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH09_30_L_nat,natural,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died clear
+CH09_31_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
+CH09_32_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,N/A,6/23/2021,N/A,Died still purple
