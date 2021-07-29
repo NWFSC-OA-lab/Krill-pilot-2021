@@ -1,75 +1,75 @@
-"*metacsv_format_file*"
-"dataset_name",""
-"source_file_name",""
-"project_name",""
-"description",""
-"keywords",""
-"data_source",""
-"r_script_source",""
-"file_creation_date",""
-"last_modified_date",""
-"version_number",""
-"version_history",""
-"editor_name_history",""
-"data_collection_start_date",""
-"data_collection_end_date",""
-"data_collection_location",""
-"species",""
-"life_stage",""
-"data_entered_by",""
-"data_contributor",""
-"data_owner",""
-"institution",""
-"data_point_of_contact",""
-"data_POC_email",""
-"archive_link",""
-"how_to_cite",""
-"acknowledgements",""
-"related_datasets",""
-"***"
-"variable_name","variable_long_name","units","description","data_type","format","missing_value_indicator","instrument","variable_min","variable_max"
-"Jar_ID","","","","","","","","",""
-"Water_type","","","","","","","","",""
-"Jar_type","","","","","","","","",""
-"Temp","","","","","","","","",""
-"Date_eggs_laid","","","","","","","","",""
-"Initial_egg_count","","","","","","","","",""
-"Date_hatched","","","","","","","","",""
-"Final_egg_count","","","","","","","","",""
-"Date_died","","","","","","","","",""
-"Preservation","","","","","","","","",""
-"Notes","","","","","","","","",""
-"###"
-"Jar_ID","Water_type","Jar_type","Temp","Date_eggs_laid","Initial_egg_count","Date_hatched","Final_egg_count","Date_died","Preservation","Notes"
-"CH06_01_S_nat","natural","small","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH06_02_S_nat","natural","small","10 C","N/A","N/A","N/A","N/A","6/24/2021","N/A","Died still purple"
-"CH06_03_S_art","artificial","small","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH06_04_S_art","artificial","small","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH06_05_L_nat","natural","large","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH06_06_L_nat","natural","large","10 C","6/23/2021","107","6/25/2021","5","N/A","1+ Calytopis observed","Removed after eggs laid"
-"CH06_07_L_art","artificial","large","10 C","N/A","N/A","N/A","N/A","6/30/2021","N/A","Held out for awhile, eventually died clear. "
-"CH06_08_L_art","artificial","large","10 C","6/23/2021","22","6/28/2021","16","N/A","Saw dead & live larvae","Removed after eggs laid"
-"CH07_09_S_nat","natural","small","10 C","N/A","N/A","N/A","N/A","6/24/2021","N/A","Died clear"
-"CH07_10_S_nat","natural","small","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH07_11_S_art","artificial","small","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH07_12_S_art","artificial","small","10 C","N/A","N/A","N/A","N/A","6/24/2021","N/A","Died still purple"
-"CH07_13_L_nat","natural","large","10 C","6/23/2021","54","6/25/2021","33","N/A","At least 2+ Calytopis observed","Removed after eggs laid"
-"CH07_14_L_nat","natural","large","10 C","6/23/2021","79","6/25/2021","4","N/A","4+ Calytopis observed","Removed after eggs laid"
-"CH07_15_L_art","artificial","large","10 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH07_16_L_art","artificial","large","10 C","N/A","N/A","N/A","N/A","6/25/2021","N/A","Died clear"
-"CH08_17_S_nat","natural","small","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH08_18_S_nat","natural","small","15 C","N/A","N/A","N/A","N/A","6/24/2021","N/A","Died clear"
-"CH08_19_S_art","artificial","small","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH08_20_S_art","artificial","small","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH08_21_L_nat","natural","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH08_22_L_nat","natural","large","15 C","6/23/2021","19","6/25/2021","5","N/A"," No live larvea found at jar bottom ","Removed after eggs laid"
-"CH08_23_L_art","artificial","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH08_24_L_art","artificial","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH09_25_S_nat","natural","small","15 C","N/A","N/A","N/A","N/A","6/24/2021","N/A","Died clear"
-"CH09_26_S_nat","natural","small","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH09_27_S_art","artificial","small","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH09_28_S_art","artificial","small","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH09_29_L_nat","natural","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH09_30_L_nat","natural","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died clear"
-"CH09_31_L_art","artificial","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
-"CH09_32_L_art","artificial","large","15 C","N/A","N/A","N/A","N/A","6/23/2021","N/A","Died still purple"
+*metacsv_format_file*,,,,,,,,,,
+dataset_name,Krill chamber study total care and hatch history,,,,,,,,,
+source_file_name,raw_data_by_jar.csv,,,,,,,,,
+project_name,raw_data_by_jar.csv,,,,,,,,,
+description,"Krill Chamber Pilot Study 2021, Krill Chamber Pilot Study 2021 10 day temperature observation, artifical and natural aquarium observation. raw_data_by_jar.csv, Collection of data from care calendar for extrusion and hatch history in Chambers 06 and 07 during the 2021 krill pilot study. ",,,,,,,,,
+keywords,"gravid female, nauplius, metanauplius, calyptopis",,,,,,,,,
+data_source,"krill_pilot_2021.rmd, raw_data_by_jar.csv, Krill 2021 Daily Log",,,,,,,,,
+r_script_source,"krill_pilot_2021.rmd, raw_data_by_jar.csv, Krill 2021 Daily Log",,,,,,,,,
+file_creation_date,7/22/21,,,,,,,,,
+last_modified_date,7/29/21,,,,,,,,,
+version_number,Verison No. 1,,,,,,,,,
+version_history,7/22/21,,,,,,,,,
+editor_name_history,Version 1,,,,,,,,,
+data_collection_start_date,6/23/21,,,,,,,,,
+data_collection_end_date,7/1/21,,,,,,,,,
+data_collection_location,"Montlake, WA (NWFSC)",,,,,,,,,
+species,euphausia pacifica,,,,,,,,,
+life_stage,"eggs,  nauplius, metanauplius, calyptopis",,,,,,,,,
+data_entered_by,"Danielle Perez, Kate Rovinski",,,,,,,,,
+data_contributor,"Danielle Perez, Kate Rovinski, Mike Maher",,,,,,,,,
+data_owner,"Danielle Perez, Kate Rovinski, Mike Maher",,,,,,,,,
+institution,"Northwest Fisheries Science Center Montlake, WA",,,,,,,,,
+data_point_of_contact,"danielle.perez@noaa.gov, kate.rovinski@noaa.gov",,,,,,,,,
+data_POC_email,"danielle.perez@noaa.gov, kate.rovinski@noaa.gov",,,,,,,,,
+archive_link,Location on google drive or GitHUB where data are archived.,,,,,,,,,
+how_to_cite,https://drive.google.com/drive/folders/1uNfpDxCAhTuSieoFRwxjAkSBHg2Yj7i-?usp=sharing,,,,,,,,,
+acknowledgements,pilot contained inside Montlake NWFSC Chamber Room Lab,,,,,,,,,
+related_datasets," raw_data_by_jar.csv, Krill 2021 Daily Log",,,,,,,,,
+***,,,,,,,,,,
+variable_name,variable_long_name,units,description,data_type,format,missing_value_indicator,instrument,variable_min,variable_max,
+Jar_ID,"Chamber Identifier, jar number, jar size, water source",character,character string,character string,character string,N/A,N/A,N/A,N/A,
+Water_type,natural water references either filter Seattle aquarium water or batch bespoke instant ocean water,character,character string,character string,character string,N/A,N/A,N/A,N/A,
+Jar_type,Jar types were either large or small ,character,character string,character string,character string,N/A,N/A,N/A,N/A,
+Temp,"Temperature set point with two character expressions ""10_C"" or ""15_C""",character,character string,character string,character string,N/A,N/A,N/A,N/A,
+Date_eggs_laid,date of eggs first laid,date,dateTime,%mm/%dd/%y,date,N/A,N/A,6/23/21,6/28/21,
+Initial_egg_count,count of eggs after hatching,numeric,numeric,numeric,numeric,N/A,Dissection Scope,0,107,
+Date_hatched,date of eggs first hatched,date,dateTime,%mm/%dd/%y,date,N/A,N/A,6/23/21,6/28/21,
+Final_egg_count,count of eggs after final count,numeric,numeric,numeric,numeric,N/A,Dissection Scope,0,33,
+Date_died,date of recorded death,date,dateTime,%mm/%dd/%y,date,N/A,N/A,6/23/21,6/28/21,
+Preservation,notes surrounding preservation,character,character string,character string,character string,N/A,N/A,N/A,N/A,
+Notes,notes ranging from gravid condition to hatch process,character,character string,character string,character string,N/A,N/A,N/A,N/A,
+###,,,,,,,,,,
+Jar_ID,Water_type,Jar_type,Temp,Date_eggs_laid,Initial_egg_count,Date_hatched,Final_egg_count,Date_died,Preservation,Notes
+CH06_01_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH06_02_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,6/24/21,N/A,Died still purple
+CH06_03_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH06_04_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH06_05_L_nat,natural,large,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH06_06_L_nat,natural,large,10 C,6/23/21,107,6/25/21,5,N/A,1+ Calytopis observed,Removed after eggs laid
+CH06_07_L_art,artificial,large,10 C,N/A,N/A,N/A,N/A,6/30/21,N/A,"Held out for awhile, eventually died clear. "
+CH06_08_L_art,artificial,large,10 C,6/23/21,22,6/28/21,16,N/A,Saw dead & live larvae,Removed after eggs laid
+CH07_09_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,6/24/21,N/A,Died clear
+CH07_10_S_nat,natural,small,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH07_11_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH07_12_S_art,artificial,small,10 C,N/A,N/A,N/A,N/A,6/24/21,N/A,Died still purple
+CH07_13_L_nat,natural,large,10 C,6/23/21,54,6/25/21,33,N/A,At least 2+ Calytopis observed,Removed after eggs laid
+CH07_14_L_nat,natural,large,10 C,6/23/21,79,6/25/21,4,N/A,4+ Calytopis observed,Removed after eggs laid
+CH07_15_L_art,artificial,large,10 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH07_16_L_art,artificial,large,10 C,N/A,N/A,N/A,N/A,6/25/21,N/A,Died clear
+CH08_17_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH08_18_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,6/24/21,N/A,Died clear
+CH08_19_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH08_20_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH08_21_L_nat,natural,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH08_22_L_nat,natural,large,15 C,6/23/21,19,6/25/21,5,N/A, No live larvea found at jar bottom ,Removed after eggs laid
+CH08_23_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH08_24_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH09_25_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,6/24/21,N/A,Died clear
+CH09_26_S_nat,natural,small,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH09_27_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH09_28_S_art,artificial,small,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH09_29_L_nat,natural,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH09_30_L_nat,natural,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died clear
+CH09_31_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
+CH09_32_L_art,artificial,large,15 C,N/A,N/A,N/A,N/A,6/23/21,N/A,Died still purple
