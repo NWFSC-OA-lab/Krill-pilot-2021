@@ -1,6 +1,17 @@
 ---
 title: "krill 2021"
-output: html_document
+output:
+ html_document:
+    df_print: paged
+    code_folding: hide
+    toc: TRUE
+    toc_depth: 4
+    toc_float: true
+    theme: cerulean
+    highlight: haddock
+    smart: false
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -25,7 +36,7 @@ write_meta_template(krill_data, here("output","Krill-pilot-2021"))
 #Remove notes columns
 krill_data <- krill_data[,-c(13,14)]
 
-# #Change date format, though may not be necessary sine the time frame is so short
+# #Change date format, though may not be necessary since the time frame is so short
 # str(krill_data)
 # krill_data$NewDate <- as.POSIXct(strptime(krill_data$Date_died, "%m/%e/%Y"))
 
@@ -53,3 +64,88 @@ p + ggtitle("Hatch success by jar type and water type") + xlab("Percent hatched"
 
 ```
 
+
+
+### Krill Survival by Jar Type and Temperature
+```{r Plot 1 of 06 Scatter plot of death dates}
+
+#Scatter plot of death dates
+p1 <- ggplot(krill_data, aes(Date_died, Temp))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p1 + ggtitle("Krill Survival by Jar Type and Temperature") + xlab("Date Died") + ylab("Temp")
+
+
+```
+
+
+
+### Krill Survival by Jar Type and Water Type
+```{r Plot 2 of 06 Scatter plot of death dates}
+
+p2 <- ggplot(krill_data, aes(Date_died, Water_type))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p2 + ggtitle("Krill Survival by Jar Type and Water Type") + xlab("Date Died") + ylab("Water type") 
+
+
+```
+
+
+
+### Hatch rate by jar type and temperature
+```{r Plot 3 of 06 Hatch rate by jar type and temperature}
+
+#Scatter plot of hatch rates
+p3 <- ggplot(krill_data, aes(Hatch_rate, Temp))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p3 + ggtitle("Hatch rate by jar type and temperature") + xlab("Number hatched") + ylab("Temp")
+
+
+```
+
+
+
+
+### Hatch rate by jar type and water type
+```{r Plot 4 of 06 Hatch rate by jar type and water type}
+
+p4 <- ggplot(krill_data, aes(Hatch_rate, Water_type))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p4 + ggtitle("Hatch rate by jar type and water type") + xlab("Number hatched") + ylab("Water type") 
+
+
+```
+
+
+
+### Hatch success by jar type and temperature
+```{r Plot 5 of 06 Hatch success by jar type and temperature}
+
+#Scatter plot of hatch success
+p5 <- ggplot(krill_data, aes(Hatch_percent, Temp))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p5 + ggtitle("Hatch success by jar type and temperature") + xlab("Percent hatched") + ylab("Temp")
+
+```
+
+
+
+
+### Hatch success by jar type and water type
+```{r Plot 6 of 06 Hatch success by jar type and water type}
+
+p6 <- ggplot(krill_data, aes(Hatch_percent, Water_type))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p6 + ggtitle("Hatch success by jar type and water type") + xlab("Percent hatched") + ylab("Temp")
+
+
+```
+
+
+
+
+
+
+
+```{r}
+#**************E*N*D*************# 
+#*********************************
+## END OF SCRIPT | END OF DOCUMENT 
+#*********************************
+```
+
+
+## END OF SCRIPT | END OF DOCUMENT
