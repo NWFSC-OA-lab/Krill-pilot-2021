@@ -1,0 +1,224 @@
+-
+title: "Larval Krill Chamber Exposure Pilot Project CTD Data 2021 graphs"
+output:
+ html_document:
+    df_print: paged
+    code_folding: hide
+    toc: TRUE
+    toc_depth: 4
+    toc_float: true
+    theme: cerulean
+    highlight: haddock
+    smart: false
+editor_options: 
+  chunk_output_type: inline
+---
+
+
+Hello World
+
+Author: OA Lab, NWFSC
+Title: Larval Krill Chamber Exposure Pilot Project CTD Data 2021 graphs
+
+
+# Version Check
+```{r 0.1 Version Check , echo=FALSE, results=FALSE, message=FALSE, warning=FALSE}
+#*********************************
+## Version Check
+#********************************* 
+R.version
+
+```
+
+
+
+
+# Libraries
+```{r 0.0 Libraries , echo=FALSE, results=FALSE, message=FALSE, warning=FALSE}
+#*********************************
+##Libraries
+#********************************* 
+library(stringr)
+library(tidyverse)
+library(plyr)
+library(nlme)
+library(tidyr)
+library(dbplyr)
+library(dplyr)
+library(purrr)
+library(wql)
+library(lubridate)
+library(tibbletime)
+library(arsenal)
+library(compareDF)
+library(todor)
+library(data.table)
+#for graphing
+library(ggplot2)
+library(ggfortify)
+library(stringr)
+library(nlme)
+library(RColorBrewer)
+library(patchwork)
+#statistical analysis
+library(gdata)
+library(rsq)
+library(doBy)
+library(lme4)
+library(lmerTest)
+#Rnotebooks 
+library(gridExtra)
+library(kableExtra)
+library(todor)
+#metadata
+library(metacsv)
+
+```
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# 2.) Dataframe 
+```{r 2.) Creating the initial Dataframe}
+#*********************************
+## 2.) Creating the initial Dataframe
+#*********************************
+#set working directory to the correct folder
+
+CTD_log_0623 <- read_csv(here::here("data", "CTD_data_0623.csv"))
+write_meta_template(CTD_log_0623, here::here("data","CTD_data_0623"))
+
+#|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+
+CTD_log_0623final <- read_csv(here::here("data", "CTD_data_0623_finalcast.csv"))
+write_meta_template(CTD_log_0623final, here::here("data","CTD_data_0623_finalcast"))
+
+```
+
+
+
+
+
+# 3.) By Depth Plots 
+```{r 3.) CTD plots by depth}
+#*********************************
+## 3.) CTD plots by depth 
+#*********************************
+
+names(CTD_log_0623)
+# [1] "Pressure_(Decibar)"                                 "Depth_(Meter)"                                     
+# [3] "Temperature_(Celsius)"                              "Conductivity_(MicroSiemens.per.Centimeter)"        
+# [5] "Specific_conductance_(MicroSiemens.per.Centimeter)" "Salinity_(Practical.Salinity.Scale)"               
+# [7] "Sound_velocity_(Meters.per.Second)"                 "Density_(Kilograms.per.Cubic.Meter)"
+
+
+# CTD_log_0623 %>% 
+#   rename(
+#     Depth_(Meter) = depth,
+#     Temperature_(Celsius) = temperature,
+#     Salinity_(Practical.Salinity.Scale) = salinity
+#     )
+
+
+names(CTD_log_0623)[names(CTD_log_0623) == "Depth_(Meter)"] <- "depth"
+names(CTD_log_0623)[names(CTD_log_0623) == "Temperature_(Celsius)"] <- "temperature"
+names(CTD_log_0623)[names(CTD_log_0623) == "Salinity_(Practical.Salinity.Scale)"] <- "salinity"
+
+p <- ggplot(CTD_log_0623, aes(temperature, depth))  + 
+            geom_jitter(data = CTD_log_0623, aes(temperature, depth)) +
+            xlab("Temperature (Celsius)") +
+            ylab("Depth (meters)") +
+            ggtitle("CTD Cast 6/23/21 Thermocline") +
+            theme_bw() 
+
+p
+
+#|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+
+```
+
+
+
+```{r}
+
+p + scale_y_reverse()
+p + ggtitle("CTD oh Jeeze all the casts are in here and no time signature...") + scale_y_reverse()
+
+
+```
+
+
+
+
+
+```{r}
+
+
+names(CTD_log_0623final)[names(CTD_log_0623final) == "Depth_(Meter)"] <- "depth"
+names(CTD_log_0623final)[names(CTD_log_0623final) == "Temperature_(Celsius)"] <- "temperature"
+names(CTD_log_0623final)[names(CTD_log_0623final) == "Salinity_(Practical.Salinity.Scale)"] <- "salinity"
+
+q <- ggplot(CTD_log_0623final, aes(temperature, depth))  + 
+            geom_jitter(data = CTD_log_0623final, aes(temperature, depth)) +
+            xlab("Temperature (Celsius)") +
+            ylab("Depth (meters)") +
+            ggtitle("6/23 Final CTD Cast Thermocline") +
+            scale_y_reverse() +
+            theme_bw() 
+
+q
+
+
+```
+
+```{r}
+q1 <- ggplot(CTD_log_0623final, aes(salinity, depth))  + 
+            geom_jitter(data = CTD_log_0623final, aes(salinity, depth)) +
+            xlab("Salinity (Practical Salinity Scale)") +
+            ylab("Depth (meters)") +
+            ggtitle("6/23 Final CTD Cast Salinity Results") +
+            scale_y_reverse() +
+            theme_bw() 
+
+q1
+```
+
+```{r}
+q + q1
+```
+
+
+
+
+
+
+```{r}
+#**************E*N*D*************# 
+#*********************************
+## END OF SCRIPT | END OF DOCUMENT 
+#*********************************
+```
+
+
+## END OF SCRIPT | END OF DOCUMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
