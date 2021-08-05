@@ -16,7 +16,6 @@ editor_options:
 ---
 
 
-
 Hello World
 
 Author: OA Lab, NWFSC
@@ -31,7 +30,6 @@ Title: Larval Krill Chamber Exposure Pilot Project CTD Data 2021
 R.version
 
 ```
-
 
 
 
@@ -54,6 +52,7 @@ library(tibbletime)
 library(arsenal)
 library(compareDF)
 library(todor)
+library(data.table)
 #for graphing
 library(ggplot2)
 library(ggfortify)
@@ -85,9 +84,20 @@ library(metacsv)
 #*********************************
 ## 2.) Creating the initial Dataframe
 #*********************************
+## 2.1 Create a list of files 
+# All files to be joined have ext. "csv" can use that pattern to join 
 
+setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
+getwd()
+CTDfiles <- list.files(pattern = ".csv")
+print(CTDfiles)
+#|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-example <- read_csv(here::here("raw_data","example.csv"))
+temp <- lapply(CTDfiles, fread, sep= ",")
+print(temp)
+CTD_data_0623 <- rbindlist(temp)
+print(CTD_data_0623)
+write.csv(CTD_data_0623, file = "CTD_data_0623.csv", row.names = FALSE)
 
 #|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
