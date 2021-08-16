@@ -11,7 +11,7 @@ output:
     highlight: haddock
     smart: false
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -19,23 +19,58 @@ knitr::opts_chunk$set(echo = TRUE)
 #random comment
 ```
 
+# load libs and data
 
 ```{r load libraries and data}
 library(here)
 library(dplyr)
 library(metacsv)
 library(ggplot2)
-
-#Read in raw data file to create a metadata template
-krill_data <- read.csv(here("data", "raw_data_by_jar.csv"))
-#Write out blank meta data template
-write_meta_template(krill_data, here("output","Krill-pilot-2021"))
+library(tidyverse)
 
 ```
-
-```{r clean up some stuff and plot and make some simple plots}
+#read data
+```{r}
+#Read in raw data file to create a metadata template
+krill_data_raw <- read.csv(here("data", "raw_data_by_jar.csv"))
+#Write out blank meta data template
+write_meta_template(krill_data, here("output","Krill-pilot-2021"))
+```
+# clean data
+```{r}
 #Remove notes columns
-krill_data <- krill_data[,-c(13,14)]
+#krill_data <- krill_data[,-c(13,14)]
+
+
+krill_data <- krill_data_raw %>%
+  select(-Notes) %>%
+  mutate(Initial_egg_count = as.numeric(Initial_egg_count)) %>%
+  mutate(Final_egg_count = as.numeric(Final_egg_count)) %>%
+  mutate(hatch_rate = Final_egg_count / Initial_egg_count) %>%
+  mutate(Date_died = as.Date(Date_died, format= "%m/%d/%Y")) %>%
+  {.}
+  
+
+
+```
+# plot hatch rate
+```{r}
+#Scatter plot of hatch rates
+p <- ggplot(krill_data, aes(Temp, hatch_rate))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15)) 
+p + ggtitle("Hatch rate by jar type and temperature") + xlab("Number hatched") + ylab("Temp")
+```
+# plot date died
+```{r}
+#Scatter plot of death dates
+p <- ggplot(krill_data, aes(Date_died, Temp))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
+p + ggtitle("Krill survival by jar type and temperature") + xlab("Date Died") + ylab("Temp")
+```
+
+
+
+# plots
+```{r clean up some stuff and plot and make some simple plots}
+
 
 # #Change date format, though may not be necessary since the time frame is so short
 # str(krill_data)
