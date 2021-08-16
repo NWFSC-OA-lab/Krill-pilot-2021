@@ -92,7 +92,7 @@ getwd()
 CTDfiles <- list.files(pattern = ".csv")
 print(CTDfiles)
 #|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
-
+setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
 temp <- lapply(CTDfiles, fread, sep= ",")
 print(temp)
 CTD_data_0623 <- rbindlist(temp)

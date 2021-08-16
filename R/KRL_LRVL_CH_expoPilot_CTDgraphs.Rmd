@@ -95,9 +95,6 @@ write_meta_template(CTD_log_0623, here::here("data","CTD_data_0623"))
 
 #|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-CTD_log_0623final <- read_csv(here::here("data", "CTD_data_0623_finalcast.csv"))
-write_meta_template(CTD_log_0623final, here::here("data","CTD_data_0623_finalcast"))
-
 ```
 
 
@@ -117,7 +114,7 @@ names(CTD_log_0623)
 # [7] "Sound_velocity_(Meters.per.Second)"                 "Density_(Kilograms.per.Cubic.Meter)"
 
 
-# CTD_log_0623 %>% 
+# CTD_log_0623 %>%
 #   rename(
 #     Depth_(Meter) = depth,
 #     Temperature_(Celsius) = temperature,
@@ -125,29 +122,35 @@ names(CTD_log_0623)
 #     )
 
 
-names(CTD_log_0623)[names(CTD_log_0623) == "Depth_(Meter)"] <- "depth"
-names(CTD_log_0623)[names(CTD_log_0623) == "Temperature_(Celsius)"] <- "temperature"
-names(CTD_log_0623)[names(CTD_log_0623) == "Salinity_(Practical.Salinity.Scale)"] <- "salinity"
+# names(CTD_log_0623)[names(CTD_log_0623) == "Depth_(Meter)"] <- "depth"
+# names(CTD_log_0623)[names(CTD_log_0623) == "Temperature_(Celsius)"] <- "temperature"
+# names(CTD_log_0623)[names(CTD_log_0623) == "Salinity_(Practical.Salinity.Scale)"] <- "salinity"
+# 
+# 
+# rename(CTD_log_0623, temperature = Temperature_(Celsius))
+# rename_with(CTD_log_0623, "temperature", starts_with("Temperature_"))
+# 
+# rename(CTD_log_0623, temperature = Temperature_(Celsius))
 
 p <- ggplot(CTD_log_0623, aes(temperature, depth))  + 
             geom_jitter(data = CTD_log_0623, aes(temperature, depth)) +
             xlab("Temperature (Celsius)") +
             ylab("Depth (meters)") +
-            ggtitle("CTD Cast 6/23/21 Thermocline") +
+            ggtitle("(6/23/21) CTD Thermocline") +
             theme_bw() 
 
 p
 
 #|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
+
 ```
 
 
 
 ```{r}
 
-p + scale_y_reverse()
-p + ggtitle("CTD oh Jeeze all the casts are in here and no time signature...") + scale_y_reverse()
+p1 <- p + scale_y_reverse()
 
 
 ```
@@ -157,31 +160,11 @@ p + ggtitle("CTD oh Jeeze all the casts are in here and no time signature...") +
 
 
 ```{r}
-
-
-names(CTD_log_0623final)[names(CTD_log_0623final) == "Depth_(Meter)"] <- "depth"
-names(CTD_log_0623final)[names(CTD_log_0623final) == "Temperature_(Celsius)"] <- "temperature"
-names(CTD_log_0623final)[names(CTD_log_0623final) == "Salinity_(Practical.Salinity.Scale)"] <- "salinity"
-
-q <- ggplot(CTD_log_0623final, aes(temperature, depth))  + 
-            geom_jitter(data = CTD_log_0623final, aes(temperature, depth)) +
-            xlab("Temperature (Celsius)") +
-            ylab("Depth (meters)") +
-            ggtitle("6/23 Final CTD Cast Thermocline") +
-            scale_y_reverse() +
-            theme_bw() 
-
-q
-
-
-```
-
-```{r}
-q1 <- ggplot(CTD_log_0623final, aes(salinity, depth))  + 
-            geom_jitter(data = CTD_log_0623final, aes(salinity, depth)) +
+q1 <- ggplot(CTD_log_0623, aes(salinity, depth))  + 
+            geom_jitter(data = CTD_log_0623, aes(salinity, depth)) +
             xlab("Salinity (Practical Salinity Scale)") +
             ylab("Depth (meters)") +
-            ggtitle("6/23 Final CTD Cast Salinity Results") +
+            ggtitle("(06/23/21) CTD Salinity Plot") +
             scale_y_reverse() +
             theme_bw() 
 
@@ -189,7 +172,7 @@ q1
 ```
 
 ```{r}
-q + q1
+p1 + q1
 ```
 
 

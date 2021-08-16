@@ -1,0 +1,13 @@
+﻿Spec Bag,Experiment,Unit,ID_1,ID_2,ID_3,TimeCollected,Date,pH
+8,Krill,Chamber,Bottle ,,,12:15 PM,5-Aug-21,5.525221107
+12,Krill,Chamber,Bottle ,,,12:15 PM,5-Aug-21,5.403421975
+11,Krill,Chamber,Well,SiliconeRubber(1/16),ParkwayPlastics,12:15 PM,5-Aug-21,N/A
+10,Krill,Chamber,Well,foam_insert,ParkwayPlastics,12:15 PM,5-Aug-21,5.464823763
+9,Krill,Chamber,Well,foam_insert,ParkwayPlastics,12:15 PM,5-Aug-21,5.549234351
+7,Krill,Chamber,Well,SiliconeRubber(1/32),ParkwayPlastics,12:15 PM,5-Aug-21,N/A
+6,Krill,Chamber,Well,no_insert,ColtPlastics,12:15 PM,5-Aug-21,5.452643774
+5,Krill,Chamber,Well,no_insert,CaryPlastics,12:15 PM,5-Aug-21,5.549234351
+4,Krill,Chamber,Well,no_insert,ParkwayPlastics,12:15 PM,5-Aug-21,5.415813199
+3,Krill,Chamber,Well,no_insert,ColtPlastics,12:15 PM,5-Aug-21,N/A
+2,Krill,Chamber,Well,SiliconeRubber(1/32),ParkwayPlastics,12:15 PM,5-Aug-21,N/A
+1,Krill,Chamber,Well,no_insert,CaryPlastics,12:15 PM,5-Aug-21,5.4890687
