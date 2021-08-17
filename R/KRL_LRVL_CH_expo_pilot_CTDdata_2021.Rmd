@@ -12,7 +12,7 @@ output:
     highlight: haddock
     smart: false
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 
@@ -72,11 +72,8 @@ library(kableExtra)
 library(todor)
 #metadata
 library(metacsv)
-
+library(here)
 ```
-
-
-
 
 # 2.) Dataframe 
 ```{r}
@@ -91,12 +88,17 @@ library(metacsv)
 # (substring(split(variables('Filename'),'_')
 
 # Troubleshooting relative datapaths
-setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
-getwd()
-CTDfilesCast1 <- read_csv(here::here("raw_data", "CC1827005_20210623_070521.csv"))
-CTDfilesCast1 <- read_csv(here::here("CTDcastData/2021.06.23", "CC1827005_20210623_070521.csv"))
+#setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
+#getwd()
+#no data in cast1
+CTDfilesCast1 <- read_csv(here::here("raw_data", "CTDcastData", "2021.06.23", "CC1827005_20210623_070521.csv"))
 
-CTDfilesCast2 <- read_csv(here::here("raw_data", "CC1827005_20210623_070614.csv"))
+cast_file_name <- "CC1827005_20210623_070614.csv"
+
+#data!
+CTDfilesCast2 <- read_csv(here::here("raw_data", "CTDcastData", "2021.06.23", cast_file_name))
+
+
 
 
 ## 2.1 Create a list of files 
@@ -127,6 +129,15 @@ print(CTD_data_0623)
 write.csv(CTD_data_0623, file = "CTD_data_0623.csv", row.names = FALSE)
 
 #|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+
+```
+
+# data clean
+```{r}
+cast_file_name_x <- substr(cast_file_name, start = 1, stop = nchar(cast_file_name)-4)
+serial <- word(cast_file_name_x, sep = "_")
+date <- word(cast_file_name_x, 2, sep = "_")
+time <- word(cast_file_name_x, 3, sep = "_")
 
 ```
 

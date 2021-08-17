@@ -132,6 +132,9 @@ names(CTD_log_0623)
 # 
 # rename(CTD_log_0623, temperature = Temperature_(Celsius))
 
+CTD_log_0623_clean <- CTD_log_0623 %>%
+  dplyr::rename(new_temperature = temperature)
+
 p <- ggplot(CTD_log_0623, aes(temperature, depth))  + 
             geom_jitter(data = CTD_log_0623, aes(temperature, depth)) +
             xlab("Temperature (Celsius)") +
@@ -140,7 +143,6 @@ p <- ggplot(CTD_log_0623, aes(temperature, depth))  +
             theme_bw() 
 
 p
-
 #|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 
