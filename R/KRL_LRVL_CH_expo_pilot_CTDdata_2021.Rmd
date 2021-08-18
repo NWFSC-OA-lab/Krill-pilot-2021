@@ -33,11 +33,12 @@ R.version
 
 
 
-# Libraries
-```{r 0.0 Libraries , echo=FALSE, results=FALSE, message=FALSE, warning=FALSE}
+# 1.) Libraries
+```{r 1.0 Libraries , echo=FALSE, results=FALSE, message=FALSE, warning=FALSE}
 #*********************************
 ##Libraries
 #********************************* 
+library(here)
 library(stringr)
 library(tidyverse)
 library(plyr)
@@ -46,33 +47,18 @@ library(tidyr)
 library(dbplyr)
 library(dplyr)
 library(purrr)
-library(wql)
 library(lubridate)
 library(tibbletime)
-library(arsenal)
-library(compareDF)
-library(todor)
 library(data.table)
 #for graphing
 library(ggplot2)
-library(ggfortify)
 library(stringr)
 library(nlme)
-library(RColorBrewer)
 library(patchwork)
-#statistical analysis
-library(gdata)
-library(rsq)
-library(doBy)
-library(lme4)
-library(lmerTest)
 #Rnotebooks 
 library(gridExtra)
 library(kableExtra)
-library(todor)
-#metadata
-library(metacsv)
-library(here)
+
 ```
 
 # 2.) Dataframe 
@@ -82,21 +68,27 @@ library(here)
 ## 2.) Creating the initial Dataframe
 #*********************************
 
-## 2.0 Reading in one file at a time
-# looking to extract part of the character string from the file name
-# something like:
-# (substring(split(variables('Filename'),'_')
+CTDfilesCast1 <- read_csv(here::here("raw_data", "CTDcastData", "2021.06.23", "CC1827005_20210623_070614.csv"))
+cast_file_name <- "CC1827005_20210623_070614"
 
-# Troubleshooting relative datapaths
-#setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
-#getwd()
-#no data in cast1
-CTDfilesCast1 <- read_csv(here::here("raw_data", "CTDcastData", "2021.06.23", "CC1827005_20210623_070521.csv"))
 
-cast_file_name <- "CC1827005_20210623_070614.csv"
+## data cleaning
+# cast_file_name_x <- substr(cast_file_name, start = 1, stop = nchar(cast_file_name)-4)
+serial <- word(cast_file_name, sep = "_")
+date <- word(cast_file_name, 2, sep = "_")
+time <- word(cast_file_name, 3, sep = "_")
 
-#data!
-CTDfilesCast2 <- read_csv(here::here("raw_data", "CTDcastData", "2021.06.23", cast_file_name))
+
+CTDfilesCast1$observationDate <- ","
+CTDfilesCast1$observationTime <- ","
+
+CTDfilesCast1$observationDate <- date
+# CTDfilesCast1$observationDate <- as.Date(as.character(as.POSIXct("20210623")))
+CTDfilesCast1$observationDate <- as.POSIXct(CTDfilesCast1$observationDate, format="%Y%mm%dd")
+
+
+
+CTDfilesCast1$observationTime <- time
 
 
 
@@ -104,18 +96,7 @@ CTDfilesCast2 <- read_csv(here::here("raw_data", "CTDcastData", "2021.06.23", ca
 ## 2.1 Create a list of files 
 # All files to be joined have ext. "csv" can use that pattern to join 
 
-setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
-getwd()
-CTDfiles <- list.files(pattern = ".csv")
-print(CTDfiles)
-#|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
-setwd("/Users/katherinerovinski/Documents/GitHub/Krill-pilot-2021/raw_data/CTDcastData/2021.06.23")
-temp <- lapply(CTDfiles, fread, sep= ",")
-print(temp)
-CTD_data_0623 <- rbindlist(temp)
-print(CTD_data_0623)
-#|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
 
 # # Split dates using " _ "
 # split_dates <- str_split(date_ranges, pattern = fixed(" _ "))
@@ -134,10 +115,7 @@ write.csv(CTD_data_0623, file = "CTD_data_0623.csv", row.names = FALSE)
 
 # data clean
 ```{r}
-cast_file_name_x <- substr(cast_file_name, start = 1, stop = nchar(cast_file_name)-4)
-serial <- word(cast_file_name_x, sep = "_")
-date <- word(cast_file_name_x, 2, sep = "_")
-time <- word(cast_file_name_x, 3, sep = "_")
+
 
 ```
 

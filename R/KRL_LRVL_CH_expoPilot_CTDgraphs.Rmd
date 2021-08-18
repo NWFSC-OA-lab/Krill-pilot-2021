@@ -46,32 +46,17 @@ library(tidyr)
 library(dbplyr)
 library(dplyr)
 library(purrr)
-library(wql)
 library(lubridate)
 library(tibbletime)
-library(arsenal)
-library(compareDF)
-library(todor)
 library(data.table)
 #for graphing
 library(ggplot2)
-library(ggfortify)
 library(stringr)
 library(nlme)
-library(RColorBrewer)
 library(patchwork)
-#statistical analysis
-library(gdata)
-library(rsq)
-library(doBy)
-library(lme4)
-library(lmerTest)
 #Rnotebooks 
 library(gridExtra)
 library(kableExtra)
-library(todor)
-#metadata
-library(metacsv)
 
 ```
 
