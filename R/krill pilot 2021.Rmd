@@ -58,7 +58,7 @@ krill_data <- krill_data_raw %>%
 
 #Scatter plot of death dates (jar type and temperature)
 p1 <- ggplot(krill_data, aes(Temp, Date_died))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
-p1 + ggtitle("Krill Survival by Jar Type and Temperature") + xlab("Date Died") + ylab("Temp")
+p1 + ggtitle("Krill Survival by Jar Type and Temperature") + xlab("Temp") + ylab("Date Died")
 
 ggsave(here("figs", "survival_jar-temp.jpeg"))
 
@@ -69,7 +69,7 @@ ggsave(here("figs", "survival_jar-temp.jpeg"))
 
 #Scatter plot of death dates (jar type and water type)
 p2 <- ggplot(krill_data, aes(Water_type, Date_died))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
-p2 + ggtitle("Krill Survival by Jar Type and Water Type") + xlab("Date Died") + ylab("Water type") 
+p2 + ggtitle("Krill Survival by Jar Type and Water Type") + xlab("Water type") + ylab("Date Died") 
 
 ggsave(here("figs", "survival_jar-waterType.jpeg"))
 
@@ -80,8 +80,8 @@ ggsave(here("figs", "survival_jar-waterType.jpeg"))
 
 #Scatter plot of hatch rates (jar type and temperature)
 p3 <- ggplot(krill_data, aes(Temp, Hatch_rate))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15)) +
-    scale_x_discrete(labels = c("6", "14", "21", "75", "102"))
-p3 + ggtitle("Hatch rate by jar type and temperature") + xlab("Number hatched") + ylab("Temp")
+    scale_y_discrete(labels = c("6", "14", "21", "75", "102"))
+p3 + ggtitle("Hatch rate by jar type and temperature") + xlab("Temp") + ylab("Number hatched")
 
 ggsave(here("figs", "hatchRate_jar-temp.jpeg"))
 
@@ -92,7 +92,7 @@ ggsave(here("figs", "hatchRate_jar-temp.jpeg"))
 
 #Scatter plot of death dates (jar type and water type)
 p4 <- ggplot(krill_data, aes(Water_type, Hatch_rate))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
-p4 + ggtitle("Hatch rate by jar type and water type") + xlab("Number hatched") + ylab("Water type")
+p4 + ggtitle("Hatch rate by jar type and water type") + xlab("Water type") + ylab("Number hatched")
 
 ggsave(here("figs", "hatchRate_jar-waterType.jpeg"))
 
@@ -103,8 +103,8 @@ ggsave(here("figs", "hatchRate_jar-waterType.jpeg"))
 
 #Scatter plot of hatch success (jar type and temperature)
 p5 <- ggplot(krill_data, aes(Temp, Hatch_percent))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15)) +
-  scale_x_discrete(labels = c("6", "14", "21", "75", "102"))
-p5 + ggtitle("Hatch success by jar type and temperature") + xlab("Percent hatched") + ylab("Temp")
+  scale_y_discrete(labels = c("6", "14", "21", "75", "102"))
+p5 + ggtitle("Hatch success by jar type and temperature") + xlab("Temp") + ylab("Percent hatched")
 
 ggsave(here("figs", "hatchSuccess_jar-temp.jpeg"))
 
@@ -115,7 +115,7 @@ ggsave(here("figs", "hatchSuccess_jar-temp.jpeg"))
 
 #Scatter plot of hatch success (jar type and temperature)
 p6 <- ggplot(krill_data, aes(Water_type, Hatch_percent))  + geom_point(aes(colour = Jar_type), size=3, position=position_jitter(h=0.15,w=0.15))
-p6 + ggtitle("Hatch success by jar type and water type") + xlab("Percent hatched") + ylab("Temp")
+p6 + ggtitle("Hatch success by jar type and water type") + xlab("Water Type") + ylab("Percent hatched")
 
 ggsave(here("figs", "hatchSuccess_jar-waterType.jpeg"))
 
